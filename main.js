@@ -53,31 +53,30 @@ toggleCardView(cards)
 foreground_cards.forEach((tile,i)=>{
         tile.addEventListener('mouseover',e=>{
             if(i%2==0){
-                console.log(background_cards[i])
-                e.target.classList.add('card-right')
-                background_cards[i].classList.add('card-right')
-                e.target.classList.remove('card-origin-right')
-                background_cards[i].classList.remove('card-origin-right')
+                background_cards[i].classList.add('card-left')
+                e.currentTarget.classList.add('card-right')
+                background_cards[i].classList.remove('card-origin-left')
+                e.currentTarget.classList.remove('card-origin-right')
             }
             else{
-                e.target.classList.add('card-left')
-                background_cards[i].classList.add('card-left')
-                e.target.classList.remove('card-origin-left')
-                background_cards[i].classList.remove('card-origin-left')
+                background_cards[i].classList.add('card-right')
+                e.currentTarget.classList.add('card-left')
+                background_cards[i].classList.remove('card-origin-right')
+                e.currentTarget.classList.remove('card-origin-left')
            }
         })
         tile.addEventListener('mouseleave',e=>{
             if(i%2==0){
-                e.target.classList.remove('card-right')
-                background_cards[i].classList.remove('card-right')
-                e.target.classList.add('card-origin-right')
-                background_cards[i].classList.add('card-origin-right')
+                background_cards[i].classList.remove('card-left')
+                e.currentTarget.classList.remove('card-right')
+                background_cards[i].classList.add('card-origin-left')
+                e.currentTarget.classList.add('card-origin-right')
             }
             else{
-                e.target.classList.remove('card-left')
-                background_cards[i].classList.remove('card-left')
-                e.target.classList.add('card-origin-left')
-                background_cards[i].classList.add('card-origin-left')
+                background_cards[i].classList.remove('card-right')
+                e.currentTarget.classList.remove('card-left')
+                background_cards[i].classList.add('card-origin-right')
+                e.currentTarget.classList.add('card-origin-left')
             }
         })
         

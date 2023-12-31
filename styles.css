@@ -42,7 +42,8 @@ div.cards-div{
     flex-direction:column;
     align-items:Center;
     justify-content:space-evenly;
-    position:Relative;
+    position:relative;
+    gap:.75rem;
 }
 .card-foreground{
     border:3px solid indigo;
@@ -51,13 +52,17 @@ div.cards-div{
     display:flex;
     flex-direction:column;
     align-items:Center;
-    transition:.5s;
+    justify-content: center;
+    transition:.75s;
+    background:#333;
+    z-index:999;
+
 }
 .card-background{
     width:100%;
     border: 2px solid yellow;
     height:inherit;
-    background:#333;
+    z-index:995;
     transition:.5s;
 }
 .card-hidden{
@@ -70,10 +75,10 @@ div.cards-div{
     
 }
 .card-left{
-    transform:translate(-275px,0)
+    transform:translate(-200px,0)
 }
 .card-right{
-    transform:translate(275px,0)
+    transform:translate(200px,0)
 }
 .card-origin-left{
     transform:translate(0px,0)
