@@ -1,5 +1,5 @@
 let cards = document.querySelectorAll('.cards-div');
-
+let disclaimer=document.querySelector('.header-disclaimer')
 let counter = 1;
 let unitSize = 0;
 let bod = document.querySelector('body')
@@ -47,7 +47,19 @@ function toggleCardView(array){
 }
 
 toggleCardView(cards)
+let st = 0;
+function btnCick(){
+    st++
+console.log(st)
+disclaimer.classList.toggle('zoom-out')
+let parent = disclaimer.parentElement;
+console.log(parent)
+parent.classList.toggle('d-appear')
 
+// setTimeout(()=>{
+// },250)
+
+}
 //tiles move left or right depending on it's index
 //hidden article tag should appear on hover
 foreground_cards.forEach((tile,i)=>{
