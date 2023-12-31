@@ -33,13 +33,15 @@ div.cards-div{
     height:75%;
     width: 400px;
     border:4px solid #fff;
-    transition:.5s;
 }
 .card-hidden{
-    transform:translate(0,2000px)
+    transform:translate(0,2000px);
+    transition:.75s ease-in;
 }
 .card-appear{
-    transform:translate(0,-100px)
+    transform:translate(0,-100px);
+    transition:.5s;
+
 }
 
 

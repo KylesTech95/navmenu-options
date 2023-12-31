@@ -1,5 +1,8 @@
 let cards = document.querySelectorAll('.cards-div');
 let counter = 1;
+let unitSize = 0;
+let bod = document.querySelector('body')
+let bodyHeight = bod.clientHeight
 
 let appearFn = (element) => {
     element.classList.add('card-appear')
@@ -38,6 +41,7 @@ function toggleCardView(array){
         
         })
         
-    }
+}
+
 
 toggleCardView(cards)
