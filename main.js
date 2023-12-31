@@ -46,13 +46,14 @@ function toggleCardView(array){
         
 }
 
-
 toggleCardView(cards)
 
-//card left or card right
+//tiles move left or right depending on it's index
+//hidden article tag should appear on hover
 foreground_cards.forEach((tile,i)=>{
         tile.addEventListener('mouseover',e=>{
-            background_cards[i].style='background:silver;color:#333;opacity:1;'
+            e.currentTarget.style='border:3px solid lime;transition:.5s'
+            background_cards[i].style='background:gray;color:#fff;opacity:.75;'
             if(i%2==0){
                 background_cards[i].classList.add('card-left')
                 e.currentTarget.classList.add('card-right')
@@ -68,6 +69,7 @@ foreground_cards.forEach((tile,i)=>{
            }
         })
         tile.addEventListener('mouseleave',e=>{
+            e.currentTarget.style='border:3px solid #fff;transition:.75s'
             background_cards[i].style='background:none;color:#fff;opacity:0;'
             if(i%2==0){
                 background_cards[i].classList.remove('card-left')
