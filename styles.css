@@ -12,7 +12,7 @@ body{
     position:fixed;
     top:0;
     left:0;
-    background: firebrick;
+    background: #333;
     display:flex;
     flex-direction:column;
     align-items:Center;
@@ -22,7 +22,7 @@ body{
 section#cards-container{
     width: 85%;
     height:100vh;
-    background:#333;
+    background:ghostWhite;
     opacity:.75;
     display:flex;
     justify-content: center;
@@ -34,6 +34,32 @@ div.cards-div{
     width: 400px;
     border:4px solid #fff;
 }
+.card-ul{
+    border:3px solid cyan;
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:Center;
+    justify-content:space-evenly;
+    position:Relative;
+}
+.card-foreground{
+    border:3px solid indigo;
+    width: 50%;
+    height: 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:Center;
+    transition:.5s;
+}
+.card-background{
+    width:100%;
+    border: 2px solid yellow;
+    height:inherit;
+    background:#333;
+    transition:.5s;
+}
 .card-hidden{
     transform:translate(0,2000px);
     transition:.75s ease-in;
@@ -41,8 +67,18 @@ div.cards-div{
 .card-appear{
     transform:translate(0,-100px);
     transition:.5s;
-
+    
 }
-
-
+.card-left{
+    transform:translate(-50px,0)
+}
+.card-right{
+    transform:translate(50px,0)
+}
+.card-origin-left{
+    transform:translate(0px,0)
+}
+.card-origin-right{
+    transform:translate(0px,0)
+}
 

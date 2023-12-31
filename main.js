@@ -1,8 +1,11 @@
 let cards = document.querySelectorAll('.cards-div');
+
 let counter = 1;
 let unitSize = 0;
 let bod = document.querySelector('body')
 let bodyHeight = bod.clientHeight
+let foreground_cards = document.querySelectorAll('.card-foreground');
+let background_cards = document.querySelectorAll('.card-background');
 
 let appearFn = (element) => {
     element.classList.add('card-appear')
@@ -45,3 +48,39 @@ function toggleCardView(array){
 
 
 toggleCardView(cards)
+
+//card left or card right
+foreground_cards.forEach((tile,i)=>{
+        tile.addEventListener('mouseover',e=>{
+            if(i%2==0){
+                e.target.classList.add('card-right')
+                background_cards[i].classList.add('card-right')
+                e.target.classList.remove('card-origin-right')
+                background_cards[i].classList.remove('card-origin-right')
+            }
+            else{
+                e.target.classList.add('card-left')
+                background_cards[i].classList.add('card-left')
+                e.target.classList.remove('card-origin-left')
+                background_cards[i].classList.remove('card-origin-left')
+           }
+        })
+        tile.addEventListener('mouseleave',e=>{
+            if(i%2==0){
+                e.target.classList.remove('card-right')
+                background_cards[i].classList.remove('card-right')
+                e.target.classList.add('card-origin-right')
+                background_cards[i].classList.add('card-origin-right')
+            }
+            else{
+                e.target.classList.remove('card-left')
+                background_cards[i].classList.remove('card-left')
+                e.target.classList.add('card-origin-left')
+                background_cards[i].classList.add('card-origin-left')
+            }
+        })
+        
+        
+    
+    
+})
