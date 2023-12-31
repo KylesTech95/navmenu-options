@@ -52,11 +52,13 @@ toggleCardView(cards)
 //card left or card right
 foreground_cards.forEach((tile,i)=>{
         tile.addEventListener('mouseover',e=>{
+            background_cards[i].style='background:silver;color:#333;opacity:1;'
             if(i%2==0){
                 background_cards[i].classList.add('card-left')
                 e.currentTarget.classList.add('card-right')
                 background_cards[i].classList.remove('card-origin-left')
                 e.currentTarget.classList.remove('card-origin-right')
+
             }
             else{
                 background_cards[i].classList.add('card-right')
@@ -66,6 +68,7 @@ foreground_cards.forEach((tile,i)=>{
            }
         })
         tile.addEventListener('mouseleave',e=>{
+            background_cards[i].style='background:none;color:#fff;opacity:0;'
             if(i%2==0){
                 background_cards[i].classList.remove('card-left')
                 e.currentTarget.classList.remove('card-right')
