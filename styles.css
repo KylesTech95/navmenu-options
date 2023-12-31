@@ -46,8 +46,8 @@ div.cards-div{
 }
 .card-foreground{
     border:3px solid indigo;
-    width: 50%;
-    height: 50px;
+    width: 75%;
+    height: 75px;
     display:flex;
     flex-direction:column;
     align-items:Center;
@@ -70,10 +70,10 @@ div.cards-div{
     
 }
 .card-left{
-    transform:translate(-50px,0)
+    transform:translate(-275px,0)
 }
 .card-right{
-    transform:translate(50px,0)
+    transform:translate(275px,0)
 }
 .card-origin-left{
     transform:translate(0px,0)

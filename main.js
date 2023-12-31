@@ -53,6 +53,7 @@ toggleCardView(cards)
 foreground_cards.forEach((tile,i)=>{
         tile.addEventListener('mouseover',e=>{
             if(i%2==0){
+                console.log(background_cards[i])
                 e.target.classList.add('card-right')
                 background_cards[i].classList.add('card-right')
                 e.target.classList.remove('card-origin-right')
